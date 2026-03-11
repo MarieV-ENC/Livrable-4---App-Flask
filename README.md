@@ -14,7 +14,7 @@
 - Fanny Suszko
 - Aristide Curtelin</p>
 
-# Objectif : réalisation d’une application web (front-office +
+# Objectif
 <p>L'objectif est de réaliser une application web incluant un front-office et un back-office qui exploite des données.</p>
 <p>Le rendu prend la forme d’un dépôt Github public respectant des règles de documentation et bonnes pratiques de développement :
 - présence d’un fichier README.md
