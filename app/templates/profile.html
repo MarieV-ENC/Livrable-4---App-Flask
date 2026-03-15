@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Profil{% endblock %}
+
+{% block content %}
+
+<!-- Exemple de ce qu'on pourra intégrer ensuite :
+<p><strong>Identifiant :</strong> {{ current_user.username }}</p>
+<p><strong>Adresse mail :</strong> {{ current_user.email }}</p>
+<p>{{ current_user.bio }}</p>
+-->
+
+<section class="bg-white rounded shadow-sm p-4 mb-4">
+    <h1 class="mb-2">Mon profil</h1>
+
+    <p class="text-muted mb-4">
+        Cette page regroupe les informations du compte utilisateur ainsi que les commentaires publiés dans l’application.
+    </p>
+
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <div class="profile-box p-4 rounded h-100">
+                <h2 class="h5 mb-3">Informations personnelles</h2>
+
+                <p><strong>Identifiant :</strong> clara123</p>
+                <p><strong>Adresse mail :</strong> clara@email.com</p>
+
+                <h3 class="h6 mt-4 mb-2">Présentation</h3>
+                <p class="mb-0">
+                    Étudiante intéressée par l’ornithologie, les migrations animales
+                    et la visualisation de données.
+                </p>
+            </div>
+        </div>
+
+        <!-- Exemple de ce qu'on pourra intégrer ensuite :
+        {% for comment in comments %}
+        <div class="comment-item mb-3 pb-3 border-bottom">
+            <p class="mb-1">
+                <strong>Fiche oiseau : {{ comment.bird.name }}</strong><br>
+                <span class="text-muted">
+                    {{ comment.created_at.strftime('%d/%m/%Y à %H:%M') }}
+                </span>
+            </p>
+            <p class="mb-0">{{ comment.content }}</p>
+        </div>
+        {% endfor %}
+        -->
+
+        <div class="col-lg-6">
+            <div class="profile-box p-4 rounded h-100">
+                <h2 class="h5 mb-3">Mes commentaires</h2>
+
+                <div class="comment-item mb-3 pb-3 border-bottom">
+                    <p class="mb-1">
+                        <strong>Fiche oiseau : Kiko</strong><br>
+                        <span class="text-muted">12/03/2026 à 15:42</span>
+                    </p>
+                    <p class="mb-0">
+                        Observé près de Séville, trajectoire très nette.
+                    </p>
+                </div>
+
+                <div class="comment-item mb-3 pb-3 border-bottom">
+                    <p class="mb-1">
+                        <strong>Fiche oiseau : Luna</strong><br>
+                        <span class="text-muted">10/03/2026 à 18:14</span>
+                    </p>
+                    <p class="mb-0">
+                        Zone de passage particulièrement intéressante.
+                    </p>
+                </div>
+
+                <div class="comment-item">
+                    <p class="mb-1">
+                        <strong>Fiche oiseau : Rio</strong><br>
+                        <span class="text-muted">08/03/2026 à 11:20</span>
+                    </p>
+                    <p class="mb-0">
+                        Détection cohérente avec la période migratoire.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
