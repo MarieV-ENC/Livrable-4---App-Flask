@@ -14,8 +14,6 @@ app.config.from_object(Config)
 
 # connection avec la bdd
 db = SQLAlchemy(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = Config().SQLALCHEMY_DATABASE_URI 
-
 
 from .routes import generales 
 from .routes import test
