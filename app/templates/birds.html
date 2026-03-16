@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Fiches oiseaux{% endblock %}
+
+{% block content %}
+
+<section class="bg-white rounded shadow-sm p-4 mb-4">
+    <h1 class="mb-3">Fiches oiseaux</h1>
+
+    <p class="text-muted mb-0">
+        Cette page présente les faucons crécerelles suivis dans le cadre du projet.
+        Chaque fiche permet de consulter les informations principales sur un individu
+        et d’accéder aux commentaires laissés par les utilisateurs.
+    </p>
+</section>
+
+
+<section class="bg-white rounded shadow-sm p-4">
+
+    <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+            <div class="bird-card p-4 rounded h-100">
+                <h2 class="h5 mb-3">Kiko</h2>
+
+                <p><strong>Espèce :</strong> Faucon crécerelle</p>
+                <p><strong>Balise GPS :</strong> 12345</p>
+                <p class="mb-4"><strong>Dernier passage :</strong> Séville</p>
+
+                <a href="{{ url_for('bird_detail') }}" class="btn btn-search">
+                    Voir la fiche
+                </a>
+            </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-4">
+            <div class="bird-card p-4 rounded h-100">
+                <h2 class="h5 mb-3">Luna</h2>
+
+                <p><strong>Espèce :</strong> Faucon crécerelle</p>
+                <p><strong>Balise GPS :</strong> 12346</p>
+                <p class="mb-4"><strong>Dernier passage :</strong> Valence</p>
+
+                <a href="{{ url_for('bird_detail') }}" class="btn btn-search">
+                    Voir la fiche
+                </a>
+            </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-4">
+            <div class="bird-card p-4 rounded h-100">
+                <h2 class="h5 mb-3">Rio</h2>
+
+                <p><strong>Espèce :</strong> Faucon crécerelle</p>
+                <p><strong>Balise GPS :</strong> 12347</p>
+                <p class="mb-4"><strong>Dernier passage :</strong> Madrid</p>
+
+                <a href="{{ url_for('bird_detail') }}" class="btn btn-search">
+                    Voir la fiche
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+

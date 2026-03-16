@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block title %}Fiche oiseau{% endblock %}
+
+{% block content %}
+
+<section class="bg-white rounded shadow-sm p-4 mb-4">
+
+<h1 class="mb-3">Fiche oiseau</h1>
+
+<div class="row g-4">
+
+<div class="col-lg-6">
+
+<div class="bird-detail-box p-4 rounded h-100">
+
+<h2 class="h4 mb-3">Kiko</h2>
+
+<p><strong>Espèce :</strong> Faucon crécerelle</p>
+<p><strong>Identifiant balise :</strong> 12345</p>
+<p><strong>Dernier passage :</strong> Séville</p>
+
+<h3 class="h6 mt-4 mb-2">Description</h3>
+
+<p class="mb-0">
+Kiko est un faucon crécerelle suivi dans le cadre du projet de migration.
+Les données GPS associées à cet individu permettent de retracer ses déplacements
+pendant la période migratoire et d’observer les zones où les passages sont
+les plus fréquents.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-6">
+
+<div class="bird-detail-box p-4 rounded h-100">
+
+<h2 class="h5 mb-3">Carte du passage</h2>
+
+<div class="map-mini-placeholder d-flex align-items-center justify-content-center">
+<span class="text-muted">
+Carte interactive (à intégrer plus tard)
+</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="bg-white rounded shadow-sm p-4 mb-4">
+
+<h2 class="h4 mb-3">Commentaires</h2>
+
+
+<div class="comment-item mb-3 pb-3 border-bottom">
+<p class="mb-1">
+<strong>clara123</strong>
+<span class="text-muted">— 12/03/2026 à 15:42</span>
+</p>
+
+<p class="mb-0">
+Observé près de Séville, trajectoire très nette.
+</p>
+</div>
+
+
+<div class="comment-item mb-3 pb-3 border-bottom">
+<p class="mb-1">
+<strong>marieB</strong>
+<span class="text-muted">— 10/03/2026 à 18:14</span>
+</p>
+
+<p class="mb-0">
+Zone de passage particulièrement intéressante.
+</p>
+</div>
+
+
+
+<h3 class="h6 mt-4 mb-3">Ajouter un commentaire</h3>
+
+{% if current_user.is_authenticated %}
+
+<form method="post">
+
+<div class="mb-3">
+<label class="form-label">Ton commentaire</label>
+
+<textarea
+name="comment"
+class="form-control"
+rows="4"
+placeholder="Écris ton commentaire ici..."
+></textarea>
+</div>
+
+<button class="btn btn-search">
+Publier le commentaire
+</button>
+
+</form>
+
+{% else %}
+
+<div class="alert alert-light border text-center">
+
+<p class="mb-3 text-muted">
+Connecte-toi pour laisser un commentaire.
+</p>
+
+<a href="{{ url_for('login') }}" class="btn btn-explore">
+Se connecter
+</a>
+
+</div>
+
+{% endif %}
+
+</section>
+
+{% endblock %}
