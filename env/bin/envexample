@@ -1,0 +1,9 @@
+DEBUG=True
+
+DB_USER=postgres
+DB_PASSWORD=Lilas.danse77
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=crec
+
+app.secret_key = "dev"
