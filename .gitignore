@@ -10,3 +10,10 @@ __pycache__/
 
 # fichiers système
 .DS_Store
+
+# Données volumineuses
+donnees.csv
+app/static/data/data_js.json
+
+# Node modules
+node_modules/
